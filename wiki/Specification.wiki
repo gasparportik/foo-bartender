@@ -9,6 +9,9 @@ Bejelentkezés után egy kezdőképernyő jelenik meg ahonnan gyorsan el lehet �
 http://foo-bartender.googlecode.com/files/prog.png 
 Az asztalokra kattintva kiválaszthatjuk, hogy milyen tevékenységet szeretnénk végbevinni.
 
+Az eladások képernyőn a manager kiválaszthat egy aktív vagy lezajlott eladást és esetleg módosíthatja azt.
+
+A rendelések képernyőn felvehet termékeket egy eladásra. 
 
 = Adatbásizstruktúra =
   * Felhasználók tábla: tartalmazza az összes felhasználót akik valamilyen módon hozzáférhetnek a rendszerhez.
