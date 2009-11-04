@@ -7,6 +7,8 @@ Bejelentkezés után egy kezdőképernyő jelenik meg ahonnan gyorsan el lehet �
   * Asztalok:meg lehet nézni valamely egységben lévő asztalokat
   * Rendelések:fel lehet venni termékeket megrendelésre, továbbá itt lehet megtekinteni a rendelés státuszát
 http://foo-bartender.googlecode.com/files/prog.png 
+Az asztalokra kattintva kiválaszthatjuk, hogy milyen tevékenységet szeretnénk végbevinni.
+
 
 = Adatbásizstruktúra =
   * Felhasználók tábla: tartalmazza az összes felhasználót akik valamilyen módon hozzáférhetnek a rendszerhez.
@@ -18,4 +20,5 @@ http://foo-bartender.googlecode.com/files/prog.png
 
 =Adminisztrációs felület=
 Hasonló a felhasználói felülethez, főként statisztikákat és nyomtatványokat tesz elérhetővé.
+Itt talalható az asztalok elrendezésére szolgáló képernyő is. 
 <bővebb információk később>
