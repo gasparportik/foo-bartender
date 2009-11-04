@@ -6,7 +6,9 @@ Bejelentkezés után egy kezdőképernyő jelenik meg ahonnan gyorsan el lehet �
   * Eladások:végig lehet követni az aznapi eladásokat
   * Asztalok:meg lehet nézni valamely egységben lévő asztalokat
   * Rendelések:fel lehet venni termékeket megrendelésre, továbbá itt lehet megtekinteni a rendelés státuszát
+
 http://foo-bartender.googlecode.com/files/prog.png 
+
 Az asztalokra kattintva kiválaszthatjuk, hogy milyen tevékenységet szeretnénk végbevinni. Ez lehet rendelés felvétele, asztal lefoglalása vagy eladás lezárása.
 
 Az eladások képernyőn a manager kiválaszthat egy aktív vagy lezajlott eladást és esetleg módosíthatja azt.
@@ -19,7 +21,8 @@ A rendelések képernyőn felvehet termékeket egy eladásra.
   * Eladások tábla: tartalmazza az eladásokhoz tartozó információkat
   * EladottTermékek tábla: tartalmazza az egyes eladásokhoz tartozó termékeket
   * Szalonok tábla: tartalmazza a Szalonokat
-  * SzalonInfo tábla: tartalmazza az egyes szalonokhoz tartozó asztalok információit
+  * Asztalok tábla: tartalmazza az egyes szalonokhoz tartozó asztalok információit (pozíció, férőhelyek)
+  * AsztalLefoglalások tábla: tartalmazza az egyes asztalok elfoglalásának időpontjait. 
 
 =Adminisztrációs felület=
 Hasonló a felhasználói felülethez, főként statisztikákat és nyomtatványokat tesz elérhetővé.
