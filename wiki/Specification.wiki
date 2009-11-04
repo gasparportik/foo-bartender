@@ -6,7 +6,8 @@ Bejelentkezés után egy kezdőképernyő jelenik meg ahonnan gyorsan el lehet �
   * Eladások:végig lehet követni az aznapi eladásokat
   * Asztalok:meg lehet nézni valamely egységben lévő asztalokat
   * Rendelések:fel lehet venni termékeket megrendelésre, továbbá itt lehet megtekinteni a rendelés státuszát
- 
+http://foo-bartender.googlecode.com/files/prog.png 
+
 = Adatbásizstruktúra =
   * Felhasználók tábla: tartalmazza az összes felhasználót akik valamilyen módon hozzáférhetnek a rendszerhez.
   * Termékek tábla: tartalmazza az összes lehetséges megvásárolható terméket és a hozzájuk tartozó információkat.
