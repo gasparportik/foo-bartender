@@ -1,15 +1,12 @@
 = Felhasználói felület =
 A szoftver felhasználói felülete az eclipse Standard Widget Toolkit-jére épül, ami biztosítja a hordozhatóságot az operenciás rendszerek között. 
-A manager (általános esetben pincér) be kell jelentkezzen az alkalmazásba ahhoz, hogy használhassa azt. Használat után kijelentkezhez, különben a rendszer 5 perc után lezáródik biztonsági okokból.
-Bejelentkezés után egy kezdőképernyő jelenik meg ahonnan gyorsan el lehet érni bizonyos tevékenységeket. Az alap képernyők a következők:
-*Eladások
- 	végig lehet követni az aznapi eladásokat
-*Asztalok
-	meg lehet nézni valamely egységben lévő asztalokat
-*Rendelések
-fel lehet venni termékeket megrendelésre, továbbá itt lehet megtekinteni a rendelés státuszát
+A manager (általános esetben pincér) be kell jelentkezzen az alkalmazásba ahhoz, hogy használhassa azt. Használat után kijelentkezhet, különben a rendszer 5 perc után lezáródik biztonsági okokból.
+Bejelentkezés után egy kezdőképernyő jelenik meg ahonnan gyorsan el lehet érni bizonyos tevékenységeket. 
+Az alap képernyők a következők:
+* Eladások:végig lehet követni az aznapi eladásokat
+* Asztalok:meg lehet nézni valamely egységben lévő asztalokat
+* Rendelések:fel lehet venni termékeket megrendelésre, továbbá itt lehet megtekinteni a rendelés státuszát
  
-
 = Adatbásizstruktúra =
 *Felhasználók tábla
 	tartalmazza az összes felhasználót akik valamilyen módon hozzáférhetnek a rendszerhez.
