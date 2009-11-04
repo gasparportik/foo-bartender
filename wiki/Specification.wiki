@@ -3,17 +3,17 @@ A szoftver felhasználói felülete az eclipse Standard Widget Toolkit-jére ép
 A manager (általános esetben pincér) be kell jelentkezzen az alkalmazásba ahhoz, hogy használhassa azt. Használat után kijelentkezhet, különben a rendszer 5 perc után lezáródik biztonsági okokból.
 Bejelentkezés után egy kezdőképernyő jelenik meg ahonnan gyorsan el lehet érni bizonyos tevékenységeket. 
 === Képernyők ===
-*Eladások:végig lehet követni az aznapi eladásokat
-*Asztalok:meg lehet nézni valamely egységben lévő asztalokat
-*Rendelések:fel lehet venni termékeket megrendelésre, továbbá itt lehet megtekinteni a rendelés státuszát
+  * Eladások:végig lehet követni az aznapi eladásokat
+  * Asztalok:meg lehet nézni valamely egységben lévő asztalokat
+  * Rendelések:fel lehet venni termékeket megrendelésre, továbbá itt lehet megtekinteni a rendelés státuszát
  
 = Adatbásizstruktúra =
-*Felhasználók tábla: tartalmazza az összes felhasználót akik valamilyen módon hozzáférhetnek a rendszerhez.
-*Termékek tábla: tartalmazza az összes lehetséges megvásárolható terméket és a hozzájuk tartozó információkat.
-*Eladások tábla: tartalmazza az eladásokhoz tartozó információkat
-*EladottTermékek tábla: tartalmazza az egyes eladásokhoz tartozó termékeket
-*Szalonok tábla: tartalmazza a Szalonokat
-*SzalonInfo tábla: tartalmazza az egyes szalonokhoz tartozó asztalok információit
+  * Felhasználók tábla: tartalmazza az összes felhasználót akik valamilyen módon hozzáférhetnek a rendszerhez.
+  * Termékek tábla: tartalmazza az összes lehetséges megvásárolható terméket és a hozzájuk tartozó információkat.
+  * Eladások tábla: tartalmazza az eladásokhoz tartozó információkat
+  * EladottTermékek tábla: tartalmazza az egyes eladásokhoz tartozó termékeket
+  * Szalonok tábla: tartalmazza a Szalonokat
+  * SzalonInfo tábla: tartalmazza az egyes szalonokhoz tartozó asztalok információit
 
 =Adminisztrációs felület=
 Hasonló a felhasználói felülethez, főként statisztikákat és nyomtatványokat tesz elérhetővé.
