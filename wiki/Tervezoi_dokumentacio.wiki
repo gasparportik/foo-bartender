@@ -1,0 +1,42 @@
+#summary Yes.
+#labels Phase-Design
+
+= Megvalósítás =
+
+== Szoftver ==
+A projekt Java nyelven készül, amennyiben nem ütközök gátakba, az Eclipse RCP frameworkjára fog épülni. Ez lehetőséget teremtene más felhasználóknak az alkalmazás bővítésére plug-inokon keresztül. Az adatbázis manipulálására az Eclipse Project EclipseLink plug-inját szeretném felhasználni, amely egyszerű kezelhetőséget biztosít. Amennyiben nem sikerül az alkalmazast RCP-vel megoldani, a parlagi Java-ra fogok alapozni.
+
+== Hardver == 
+Az alkalmazás futtatásához szükség lesz egy adatbázis szerverre, ez nagyobb terhelhetőséggel kell rendelkezzen, mint a felhasználói számítógépek. Amennyiben nincs szükség az adminisztrációs felület és az eladási felület egyszerre történő felhasználására, a kliens szoftver futhat a fent említett adatbázis szerverről is, ellenkező esetben kell külön kliens számítógép, amelynek a hardverkonfigurációja lehet gyengébb is (további részletek az alkalmazás tesztelése után) és hálózatban kell legyen a szerverrel.
+
+= Felhaszálói felüleltek(GUI) =
+
+== Általános leírás ==
+A felületek kirajzolására az Eclipse SWT vagy a Java Swing toolkitjét fogja az alkalmazás használni. Ennek előnye, hogy bármilyen operációs rendszert is használ a felhasználó, az eredmény ugyanaz lesz. A továbbiakban leírt "képernyők" valójában tabok(fülek), amik többsége a főmenüből nyitható meg.
+
+== Eladási felület ==
+Erre a felületre az eladást végző személyek léphetnek be(pl pincér). Magasabb ranggal rendelkező felhasználók úgyszintén beléphetnek.
+
+=== Bejelentkezés ===
+Ez a kedző képernyő, tehát ha nincs felhasználó bejelentkezve a rendszerbe, ez jelenik meg először. Tartalmazza a felhasználók listáját, valamint ha kiválasztottunk egy felhasználót megjelenik egy szövegmező ahova írjuk a jelszavat. A jelszó beírásánál használhatunk virtuális billentyűzetet, amennyiben a számítógép nincs ellátva vele.
+
+=== Eladások ===
+Ezen a felhasználó megtekintheti az aznapi eladásait. Megjelenítése listaként történik, valamely elemre kattintva bővebb információk jelennek meg.
+
+=== Asztalok ===
+Ez egy grafikus képernyő, amely az asztalok helyzetét mutatja valamely teremben. Az asztalokra kattintva különböző tevékenységeket vihetünk véghez.
+
+=== Rendelés (felvétele/szerkesztése) ===
+Ezen a képernyőn a felhasználó kiválaszthatja az eladandó termékeket, azok mennyiségét és megtekintheti ezek értékét. A termékeket egy görgethető listából választja ki a felhasználó, amelyek így átkerülnek egy másik listára, amit a felhasználó szabadon szerkeszthet.
+
+=== Fizetés ===
+Itt a felhasználó kiválaszthatja a fizetés módját, majd a fizetés után lezárhatja az eladást. A képernyő kinézetele még nem tisztázott.
+
+== Adminisztrációs felület ==
+
+=== Leírás ===
+Ez a felület nem elérhető az eladók számára, csak adminisztrátori joggal rendelkező felhasználók léphetnek be. Az itt lévő képernyők nagyrészben könyvelési feladatokat látnak el, de ugyanakkor az eladási statisztikát is megtekinthetőek.
+
+= Szójegyzék/Wiki linkek =
+Eclipse RCP - http://wiki.eclipse.org/index.php/Rich_Client_Platform
+EclipseLink - http://en.wikipedia.org/wiki/EclipseLink
