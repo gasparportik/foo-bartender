@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3BD495B1-C092-43BB-919E-39212B83E456}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>foobartender</RootNamespace>
+    <AssemblyName>foobartender</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>56</ApplicationRevision>
+    <ApplicationVersion>0.4.2.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <StartupObject>foobartender.Program</StartupObject>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants.cs" />
+    <Compile Include="forms\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\AccountEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\BankEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\CategoryEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\CompanyEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\DataView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\GenericEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\GenericEdit.Designer.cs">
+      <DependentUpon>GenericEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\InnerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\InvoiceEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\InvoicePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\InvoicePrint.Designer.cs">
+      <DependentUpon>InvoicePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\InvoiceSubEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\LogonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\LogonForm.Designer.cs">
+      <DependentUpon>LogonForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\ProductEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ReceptionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\ReceptionSubEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\RecipeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\RecipeSubEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\SaleEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\SaloonEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\SectionEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\SubItemEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\SubItemEdit.Designer.cs">
+      <DependentUpon>SubItemEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\TableEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\TablesView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\TablesView.Designer.cs">
+      <DependentUpon>TablesView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\TransferEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\TransferSubEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\UnitEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\CompanyPicker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\CompanyPicker.Designer.cs">
+      <DependentUpon>CompanyPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FieldEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\FieldEditor.Designer.cs">
+      <DependentUpon>FieldEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InputBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\InputBox.Designer.cs">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\InputDialogBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ItemEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\ItemEditor.Designer.cs">
+      <DependentUpon>ItemEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NumPad.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NumPad.Designer.cs">
+      <DependentUpon>NumPad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SaleItemManager.cs" />
+    <Compile Include="ValueFormatter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\GenericEdit.resx">
+      <DependentUpon>GenericEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\InvoicePrint.resx">
+      <DependentUpon>InvoicePrint.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\LogonForm.resx">
+      <DependentUpon>LogonForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\OrderForm.resx">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\SubItemEdit.resx">
+      <DependentUpon>SubItemEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\TablesView.resx">
+      <DependentUpon>TablesView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CompanyPicker.resx">
+      <DependentUpon>CompanyPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\FieldEditor.resx">
+      <DependentUpon>FieldEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\InputBox.resx">
+      <DependentUpon>InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ItemEditor.resx">
+      <DependentUpon>ItemEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NumPad.resx">
+      <DependentUpon>NumPad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ItemManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\115856-magic-marker-icon-people-things-table3-sc52.png" />
+    <Content Include="icon.ico" />
+    <Content Include="Resources\add-icon.png" />
+    <Content Include="Resources\Alias Arrow.png" />
+    <None Include="Resources\button.png" />
+    <Content Include="Resources\checked.gif" />
+    <Content Include="Resources\delete_icon.gif" />
+    <Content Include="Resources\free.png" />
+    <Content Include="Resources\icon.gif" />
+    <Content Include="Resources\meal.png" />
+    <Content Include="Resources\occupied.png" />
+    <Content Include="Resources\order.png" />
+    <None Include="Resources\tableorder.png" />
+    <None Include="Resources\tableoccupied.png" />
+    <None Include="Resources\tableFree.png" />
+    <Content Include="Resources\unchecked.gif" />
+    <Content Include="Resources\Waiter_U4J1RV.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{6F2A2BBA-A38D-4D93-9796-7E5759DF840D}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Util\Util.csproj">
+      <Project>{F7213295-4B7F-4C08-8F07-C9EB48BB8693}</Project>
+      <Name>Util</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
