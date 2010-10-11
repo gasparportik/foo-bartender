@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "foobartender", "foobartender\foobartender.csproj", "{3BD495B1-C092-43BB-919E-39212B83E456}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{6F2A2BBA-A38D-4D93-9796-7E5759DF840D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Util", "Util\Util.csproj", "{F7213295-4B7F-4C08-8F07-C9EB48BB8693}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BD495B1-C092-43BB-919E-39212B83E456}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BD495B1-C092-43BB-919E-39212B83E456}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BD495B1-C092-43BB-919E-39212B83E456}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BD495B1-C092-43BB-919E-39212B83E456}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F2A2BBA-A38D-4D93-9796-7E5759DF840D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F2A2BBA-A38D-4D93-9796-7E5759DF840D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F2A2BBA-A38D-4D93-9796-7E5759DF840D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F2A2BBA-A38D-4D93-9796-7E5759DF840D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7213295-4B7F-4C08-8F07-C9EB48BB8693}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7213295-4B7F-4C08-8F07-C9EB48BB8693}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7213295-4B7F-4C08-8F07-C9EB48BB8693}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7213295-4B7F-4C08-8F07-C9EB48BB8693}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
