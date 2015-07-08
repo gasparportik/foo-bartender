@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{8fb86d3f-01f5-4364-a04d-be2a82c4e784}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>Foobartender</RootNamespace>
+    <AssemblyName>Foobartender</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="Tables" />
+    <Folder Include="Views" />
+    <Folder Include="Programmability" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\Account.sql" />
+    <Build Include="Tables\Bank.sql" />
+    <Build Include="Tables\CashClosing.sql" />
+    <Build Include="Tables\Category.sql" />
+    <Build Include="Tables\Company.sql" />
+    <Build Include="Tables\Country.sql" />
+    <Build Include="Tables\Invoice.sql" />
+    <Build Include="Tables\InvoiceItem.sql" />
+    <Build Include="Tables\Product.sql" />
+    <Build Include="Tables\Production.sql" />
+    <Build Include="Tables\ProductionItem.sql" />
+    <Build Include="Tables\Reception.sql" />
+    <Build Include="Tables\ReceptionItem.sql" />
+    <Build Include="Tables\Recipe.sql" />
+    <PostDeploy Include="Script.PostDeploy.sql" />
+    <Build Include="Views\RawProducts.sql" />
+    <Build Include="Views\RecipeProducts.sql" />
+    <Build Include="Programmability\LoadUnitsForProduct.sql" />
+    <Build Include="Programmability\DeliverReception.sql" />
+    <Build Include="Programmability\LoadTablesForSaloon.sql" />
+    <Build Include="Programmability\GenerateCashClosing.sql" />
+    <Build Include="Programmability\ModifyTable.sql" />
+    <Build Include="Programmability\CreateUser.sql" />
+    <Build Include="Programmability\ChangeUserSuspension.sql" />
+    <Build Include="Programmability\DeleteUser.sql" />
+    <Build Include="Programmability\TransferProducts.sql" />
+    <Build Include="Programmability\DeductStockForProduct.sql" />
+    <Build Include="Programmability\DeliverInvoice.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Tables\RecipeItem.sql" />
+    <Build Include="Tables\Sale.sql" />
+    <Build Include="Tables\SaleItem.sql" />
+    <Build Include="Tables\Saloon.sql" />
+    <Build Include="Tables\SaloonTable.sql" />
+    <Build Include="Tables\Section.sql" />
+    <Build Include="Tables\Stock.sql" />
+    <Build Include="Tables\Transfer.sql" />
+    <Build Include="Tables\TransferItem.sql" />
+    <Build Include="Tables\Unit.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Database.publish.xml" />
+  </ItemGroup>
+</Project>

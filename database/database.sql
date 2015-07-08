@@ -1,5 +1,3 @@
-USE [foobartender]
-GO
 /****** Object:  Role [AccountantRole]    Script Date: 03/24/2011 21:09:12 ******/
 CREATE ROLE [AccountantRole]
 GO

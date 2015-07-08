@@ -165,6 +165,7 @@ namespace foobartender.forms
                 }
                 editing = true;
                 SetEditorsEnabledState(true);
+                dao.LoadById(0);
                 editedRow = dao.Table().NewRow();
                 UpdateEditors();
             }

@@ -1,0 +1,9 @@
+.vs
+DataAccessLayer/bin/*
+DataAccessLayer/obj/*
+foobartender/bin/*
+foobartender/obj/*
+Util/bin/*
+Util/obj/*
+Database/bin/*
+Database/obj/*

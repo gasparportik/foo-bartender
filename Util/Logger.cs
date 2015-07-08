@@ -5,7 +5,7 @@ namespace Util
 {
     public class Logger
     {
-        private static string LOG_PATH = "C:\\foobartender.log";
+        private static string LOG_PATH = "C:\\tmp\\foobartender.log";
         private static Logger instance;
 
         private Logger()

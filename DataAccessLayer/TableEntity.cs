@@ -79,7 +79,6 @@ namespace DataAccessLayer
 
         public bool Load()
         {
-            if (id == 0) return false;
             LoadFiltered(tabledef.tableName + ".Id = " + id);
             mainAdapter = adapter;
             values = Table();
@@ -109,19 +108,27 @@ namespace DataAccessLayer
                 }
                 query += filter;
             }
-            
+
             return Select(query);
         }
 
         protected virtual int SaveRow(DataRow row, bool forced)
         {
+            LoadById(0);
             var cb = new SqlCommandBuilder(mainAdapter);
+            mainAdapter.RowUpdating += new SqlRowUpdatingEventHandler(OnRowUpdating);
+            mainAdapter.RowUpdated += new SqlRowUpdatedEventHandler(OnRowUpdated);
+
             cb.ConflictOption = forced ? ConflictOption.OverwriteChanges : ConflictOption.CompareAllSearchableValues;
+            mainAdapter.InsertCommand = cb.GetInsertCommand();
+            var r = dataSet.Tables[0].NewRow();
+            dataSet.Tables[0].Rows.Add(r);
+            r.ItemArray = row.ItemArray;
             try
             {
-                mainAdapter.Update(new[] {row});
+                var res = mainAdapter.Update(dataSet);
                 return 1;
-            } 
+            }
             catch (DBConcurrencyException ex)
             {
                 Logger.Instance.Exception(this, ex);
@@ -131,6 +138,27 @@ namespace DataAccessLayer
             {
                 Logger.Instance.Exception(this, ex);
                 return 0;
+            }
+        }
+
+        protected static void OnRowUpdating(object sender, SqlRowUpdatingEventArgs args)
+        {
+            if (args.StatementType == StatementType.Delete)
+            {
+                System.IO.TextWriter tw = System.IO.File.AppendText("Deletes.log");
+                tw.WriteLine(
+                  "{0}: Customer {1} Deleted.", DateTime.Now,
+                   args.Row["CustomerID", DataRowVersion.Original]);
+                tw.Close();
+            }
+        }
+
+        protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)
+        {
+            if (args.Status == UpdateStatus.ErrorsOccurred)
+            {
+                args.Row.RowError = args.Errors.Message;
+                args.Status = UpdateStatus.SkipCurrentRow;
             }
         }
 

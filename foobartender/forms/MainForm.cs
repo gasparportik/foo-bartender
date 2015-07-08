@@ -60,7 +60,7 @@ namespace foobartender.forms
             ShowChild(logonForm = new LogonForm(this));
             //Login("cpotter", "12589");
             Login("jsmith", "kovacs");
-            new ProductEdit().ShowDialog();
+            //new ProductEdit().ShowDialog();
         }
 
         public void AddChild(InnerForm child)
